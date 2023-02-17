@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="04700337-8a88-48db-bade-d2a908b36870" name="Changes" comment="">
+    <list default="true" id="04700337-8a88-48db-bade-d2a908b36870" name="Changes" comment="Registration of sales user.">
       <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PageObject/base_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/PageObject/base_page.py" afterDir="false" />
@@ -98,11 +98,23 @@
       <workItem from="1676544970629" duration="12459000" />
       <workItem from="1676615547194" duration="8846000" />
       <workItem from="1676626445662" duration="1852000" />
-      <workItem from="1676628311895" duration="4114000" />
+      <workItem from="1676628311895" duration="4445000" />
     </task>
+    <task id="LOCAL-00001" summary="Registration of sales user.">
+      <created>1676632640188</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1676632640188</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Registration of sales user." />
+    <option name="LAST_COMMIT_MESSAGE" value="Registration of sales user." />
   </component>
 </project>
