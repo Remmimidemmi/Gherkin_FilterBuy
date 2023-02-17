@@ -22,3 +22,6 @@ def before_feature(context, arg):
     # use the same browser instance for all scenarios in the feature
     # if you want to run fresh browser session on each scenario put it in before_scenario()
     use_fixture(browser, context)
+
+
+

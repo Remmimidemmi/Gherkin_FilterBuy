@@ -16,11 +16,9 @@ class BasePage:
     def open(self):
         self.browser.get(self.browser.current_url)
 
-    @step('User click on "My Account" button')
     def account_page(self):
         self.browser.find_element(*MainPageLocators.MY_ACCOUNT_BUTTON).click()
 
-    @step("User see a welcome message")
     def hello_message(self):
         hello_user = self.browser.find_element(*MainPageLocators.HELLO_USERNAME)
         text_hello_user = hello_user.text
@@ -51,9 +49,4 @@ class BasePage:
             except:
                 time.sleep(10)
 
-    @step('User sends a request to activate the sales account')
-    def reg_sales_user(self):
-        time.sleep(5)
-        self.browser.find_element(*MainPageLocators.REQUEST_SALES_USER_FIELD).send_keys("Test" + str(
-            random.randint(1, 99999)))
-        self.browser.find_element(*MainPageLocators.BECOME_SALES_USER_BUTTON).click()
+

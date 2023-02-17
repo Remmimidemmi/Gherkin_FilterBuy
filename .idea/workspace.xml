@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="04700337-8a88-48db-bade-d2a908b36870" name="Changes" comment="" />
+    <list default="true" id="04700337-8a88-48db-bade-d2a908b36870" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PageObject/base_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/PageObject/base_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PageObject/login_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/PageObject/login_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PageObject/react_admin_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/PageObject/react_admin_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PageObject/sales_user.py" beforeDir="false" afterPath="$PROJECT_DIR$/PageObject/sales_user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment.py" beforeDir="false" afterPath="$PROJECT_DIR$/environment.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/features/sales_user_signin_signup.feature" beforeDir="false" afterPath="$PROJECT_DIR$/features/sales_user_signin_signup.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/steps/SalesUser.py" beforeDir="false" afterPath="$PROJECT_DIR$/steps/SalesUser.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,10 +27,14 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2LojePbEeCuvbHOW9XBiUIgwe1I" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -29,6 +43,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;last_opened_file_path&quot;: &quot;/home/user/PycharmProjects/Gherkin_FilterBuy/PageObject&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -81,7 +96,9 @@
       <updated>1676544424093</updated>
       <workItem from="1676544536940" duration="419000" />
       <workItem from="1676544970629" duration="12459000" />
-      <workItem from="1676615547194" duration="6630000" />
+      <workItem from="1676615547194" duration="8846000" />
+      <workItem from="1676626445662" duration="1852000" />
+      <workItem from="1676628311895" duration="4114000" />
     </task>
     <servers />
   </component>
