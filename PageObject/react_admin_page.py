@@ -1,10 +1,7 @@
-import time
-from behave import step
-
-from PageObject.URLs import Urls
-from PageObject.data import AdminCreds, LogInCreds
+from syst.URLs import Urls
+from syst.data import AdminCreds, LogInCreds
 from PageObject.base_page import BasePage
-from PageObject.locators import ReactAdminLocators, MainPageLocators
+from syst.locators import ReactAdminLocators
 
 
 class ReactAdminPage(BasePage):

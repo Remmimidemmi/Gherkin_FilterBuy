@@ -11,6 +11,11 @@ class MainPageLocators:
     LOGOUT_BUTTON = (By.CSS_SELECTOR, "#account-drop-logout > a")
 
 
+# hdr-mr > span:nth-child(1) > span:nth-child(1)
+# hdr-tr > span.link-wrap.account-link
+# hdr-tr > span.link-wrap.account-link > span
+# hdr-tr > span.link-wrap.account-link
+
 class LoginPageLocators:
     SIGN_UP_EMAIL = (By.CSS_SELECTOR, "#signup-email")
     SIGN_UP_PASSWORD = (By.CSS_SELECTOR, "#signup-password")
@@ -25,7 +30,7 @@ class LoginPageLocators:
     ERROR_RESET_PASSWORD_MESSAGE = (By.CSS_SELECTOR, "#password-reset-error")
     RESET_PASSWORD_LINK = (By.CSS_SELECTOR, "#reset-your-password")
     FORGOT_PASSWORD_LINK = (By.CSS_SELECTOR, "#password-reset")
-    SIGN_UP_LINK_AFTER_FORGOT = (By.CSS_SELECTOR, "#password-reset-signup") #reset-your-password
+    SIGN_UP_LINK_AFTER_FORGOT = (By.CSS_SELECTOR, "#password-reset-signup")  # reset-your-password
     RESET_PASSWORD_FIELD = (By.CSS_SELECTOR, "#password-reset-email")
     RESET_PASSWORD_SUBMIT_BTN = (By.CSS_SELECTOR, "#password-reset-submit")
     NEW_PASSWORD_RESET_FIELD = (By.CSS_SELECTOR, "#id_new_password1")
@@ -61,7 +66,7 @@ class NewCustomersLocators:
     POSTCODE_ZIP = (By.CSS_SELECTOR, "#shipping_address\.postal_code")
     CUSTOMERS_LIST_NEW_CUSTOMER = (By.CSS_SELECTOR, "div.Mui-even:nth-child(1) > div:nth-child(2) > a:nth-child(1)")
     CUSTOMERS_LIST_CUSTOMER_NAME = (By.XPATH, '//*[@id="customersTable"]/div/div[2]/div['
-                                                     '2]/div/div/div/div/div/div[1]/div[1]')
+                                              '2]/div/div/div/div/div/div[1]/div[1]')
     ALABAMA = (By.CSS_SELECTOR, '#shipping_address.state-option-0')
     EMPTY_FIELD_NEW_CUSTOMER_MESSAGE = (By.CSS_SELECTOR, "#completeName-helper-text")
     CUSTOMERS_TAB = (By.XPATH, '//*[@id="appBar"]/nav/a[4]')
@@ -73,5 +78,4 @@ class NewCustomersLocators:
     USER_NAME_FROM_DETAILS = (By.XPATH, '//*[@id="root"]/div[1]/div[3]/div/div/main/div/div/div/div[2]/div['
                                         '2]/div/div/div/div[1]/div[2]/div[2]')
     CUSTOMER_INFORMATION_INSCR = (By.XPATH, '//*[@id="root"]/div[1]/div[3]/div/div/main/div/div/div/div[1]/div[1]/h2')
-
-
+    ADD_CUSTOMER_NOTI_SUCCESS = (By.XPATH, '/html/body/div[1]/div[4]/div[2]/div[2]/div/div/div[1]')

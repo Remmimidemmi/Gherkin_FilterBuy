@@ -32,4 +32,6 @@ class NewCustomerData:
     TOWN_CITY = 'RandomTown' + str(random.randint(1, 99999))
     STATE = 'AL'
     POSTCODE_ZIP = str(random.randint(10000, 99999))
+    CUSTOMER_EMAIL_ONE = "user_" + str(time.time()) + "@gmail.com"
+    CUSTOMER_EMAIL_TWO = "user_" + str(time.time()) + "@gmail.com"
 

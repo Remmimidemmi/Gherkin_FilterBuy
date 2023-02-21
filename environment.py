@@ -18,10 +18,12 @@ def browser(context):
     context.browser.quit()
 
 
-def before_feature(context, arg):
-    # use the same browser instance for all scenarios in the feature
-    # if you want to run fresh browser session on each scenario put it in before_scenario()
-    use_fixture(browser, context)
+fixture_registry1 = {"fixture.new_browser": browser}
 
 
+def before_scenario(context, scenario):
+    if "fixture.new_browser" in scenario.tags:
+        use_fixture(browser, context)
+        # use the same browser instance for all scenarios in the feature
+        # if you want to run fresh browser session on each scenario put it in before_scenario()
 

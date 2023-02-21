@@ -1,11 +1,8 @@
-from selenium.common import NoSuchElementException
-from behave import step
-import random
 from selenium.webdriver.support import expected_conditions as EC
 import time
 from selenium.webdriver.support.wait import WebDriverWait
 
-from PageObject.locators import MainPageLocators
+from syst.locators import MainPageLocators
 
 
 class BasePage:
