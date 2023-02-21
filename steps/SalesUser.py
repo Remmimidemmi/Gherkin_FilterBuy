@@ -5,36 +5,7 @@ from PageObject.base_page import BasePage
 from PageObject.login_page import LoginPage
 from PageObject.react_admin_page import ReactAdminPage
 from PageObject.sales_user_page import SalesUserPage
-
-
-@step("User opens the website: 'FilterBuy'")
-def open_main_page(context):
-    browser: WebDriver = context.browser
-    LoginPage(browser).main_page()
-
-
-@step('User click on "My Account" button')
-def click_my_account(context):
-    browser: WebDriver = context.browser
-    BasePage(browser).account_page()
-
-
-@step("User enter the data in registration fields")
-def enter_data_in_register_fields(context):
-    browser: WebDriver = context.browser
-    LoginPage(browser).common_user_registration()
-
-
-@step("User clicks Sign Up button")
-def click_sign_up(context):
-    browser: WebDriver = context.browser
-    LoginPage(browser).sign_up_button()
-
-
-@step("User see a welcome message")
-def welcome_message(context):
-    browser: WebDriver = context.browser
-    LoginPage(browser).hello_message()
+from syst.data import NewCustomerData
 
 
 @step('User goes to the page with sending requests to activate the sales account')
@@ -61,12 +32,6 @@ def activate_sales_account(context):
     ReactAdminPage(browser).activate_checkbox_from_outside_salers()
 
 
-@step('User can login in their new sales account')
-def login_user_in_new_sales_account(context):
-    browser: WebDriver = context.browser
-    LoginPage(browser).login_after_registration()
-
-
 @step('User login as sales user')
 def login_as_sales_user(context):
     browser: WebDriver = context.browser
@@ -86,16 +51,16 @@ def user_enter_customer_email(context):
 
 
 @step('User filling customer main contact in new customer tab')
-def customer_main_contact_one(context):
+def customer_main_contact(context):
     browser: WebDriver = context.browser
-    SalesUserPage(browser).new_customer_email_one()
+    SalesUserPage(browser).new_customer_email(NewCustomerData.CUSTOMER_EMAIL_ONE)
     SalesUserPage(browser).new_main_contact()
 
 
 @step('User filling customers main contact in new customer tab')
-def customer_main_contact_two(context):
+def customer_main_contact(context):
     browser: WebDriver = context.browser
-    SalesUserPage(browser).new_customer_email_two()
+    SalesUserPage(browser).new_customer_email(NewCustomerData.CUSTOMER_EMAIL_TWO)
     SalesUserPage(browser).new_main_contact()
 
 
@@ -106,15 +71,16 @@ def submit_customer_button(context):
 
 
 @step('New customer displayed in Customers tab')
-def check_for_new_customer_one(context):
+def check_for_new_customer(context):
     browser: WebDriver = context.browser
-    SalesUserPage(browser).new_customer_check_one()
+    SalesUserPage(browser).new_customer_check(NewCustomerData.CUSTOMER_EMAIL_ONE)
 
 
 @step('New customer displayed in Customer tab')
-def check_for_new_customer_two(context):
+def check_for_new_customer(context):
     browser: WebDriver = context.browser
-    SalesUserPage(browser).new_customer_check_two()
+    SalesUserPage(browser).new_customer_check(NewCustomerData.CUSTOMER_EMAIL_TWO)
+
 
 @step('Checking for the success notification')
 def check_add_customer_notifier(context):

@@ -44,6 +44,12 @@ class LoginPage(BasePage):
         self.browser.find_element(*LoginPageLocators.SIGN_IN_PASSWORD).send_keys(LogInCreds.SIGN_IN_PASSWORD)
         self.signin_button()
 
+    def user_login_email(self, email):
+        self.browser.find_element(*LoginPageLocators.SiGN_IN_EMAIL).send_keys(email)
+
+    def user_login_password(self, password):
+        self.browser.find_element(*LoginPageLocators.SIGN_IN_PASSWORD).send_keys(password)
+
     def common_user_logout(self):
         self.browser.find_element(*MainPageLocators.USER_MY_ACCOUNT_BUTTON).click()
         self.browser.find_element(*MainPageLocators.LOGOUT_BUTTON).click()

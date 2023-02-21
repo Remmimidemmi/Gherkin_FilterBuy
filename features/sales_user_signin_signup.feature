@@ -1,7 +1,10 @@
 Feature: Sales(LogIn/SignUp)
-  @fixture.new_browser
-  Scenario: The user registers a new sales account
+
+  Background:
     Given User opens the website: 'FilterBuy'
+
+  @fixture.new_browser
+  Scenario: User registers a new sales account
 
     When User click on "My Account" button
       And User enter the data in registration fields
@@ -12,6 +15,20 @@ Feature: Sales(LogIn/SignUp)
       And Admin login into their account
       And Admin approves new sales user
     Then User can login in their new sales account
+
+  @fixture.new_browser
+  Scenario: User try to login with incorrect password
+
+    When User click on "My Account" button
+      And User fills correct email
+      And User fills incorrect password
+      And User clicks the "Log In" button
+    Then User is not logged in and sees an error message
+      And Link "reset password" is clickable
+    """Invalid username/password. Please try again. If you have ordered from us previously
+                          or created an account, you can also reset your password. """
+
+
 
 
 

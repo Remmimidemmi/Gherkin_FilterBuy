@@ -48,11 +48,9 @@ class SalesUserPage(BasePage):
                                                      f"\n{user_from_details}\n!=\n{user_to_details}"
         print(f"\nDetails button work correctly:\n{customer_information}\n{user_to_details} == {user_from_details}")
 
-    def new_customer_email_one(self):
-        self.browser.find_element(*NewCustomersLocators.EMAIL).send_keys(NewCustomerData.CUSTOMER_EMAIL_ONE)
+    def new_customer_email(self, email):
+        self.browser.find_element(*NewCustomersLocators.EMAIL).send_keys(email)
 
-    def new_customer_email_two(self):
-        self.browser.find_element(*NewCustomersLocators.EMAIL).send_keys(NewCustomerData.CUSTOMER_EMAIL_TWO)
 
     def new_customer_incorrect_email(self):
         self.browser.find_element(*NewCustomersLocators.EMAIL).send_keys(RegistrationCreds.INCORRECT_REGISTRATION_EMAIL)
@@ -94,19 +92,12 @@ class SalesUserPage(BasePage):
     def submit_button(self):
         self.browser.find_element(*NewCustomersLocators.SUBMIT_CUSTOMER_BTN).click()
 
-    def new_customer_check_one(self):
-        email = NewCustomerData.CUSTOMER_EMAIL_ONE
+    def new_customer_check(self, email):
         new_customer_email = self.browser.find_element(*NewCustomersLocators.CUSTOMERS_LIST_NEW_CUSTOMER).text
         assert new_customer_email == email, f"New customer is not found!\n{email}\n" \
                                             f"!=\n{new_customer_email}"
         print(f"\nNew customer:{new_customer_email}\n==\n{email}")
 
-    def new_customer_check_two(self):
-        email = NewCustomerData.CUSTOMER_EMAIL_TWO
-        new_customer_email = self.browser.find_element(*NewCustomersLocators.CUSTOMERS_LIST_NEW_CUSTOMER).text
-        assert new_customer_email == email, f"New customer is not found!\n{email}\n" \
-                                            f"!=\n{new_customer_email}"
-        print(f"\nNew customer:{new_customer_email}\n==\n{email}")
 
     def reg_sales_user(self):
         self.browser.find_element(*MainPageLocators.REQUEST_SALES_USER_FIELD).send_keys("Test" + str(

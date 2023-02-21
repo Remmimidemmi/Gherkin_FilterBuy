@@ -2,6 +2,7 @@ from selenium.webdriver.support import expected_conditions as EC
 import time
 from selenium.webdriver.support.wait import WebDriverWait
 
+from syst.data import RegistrationCreds
 from syst.locators import MainPageLocators
 
 
