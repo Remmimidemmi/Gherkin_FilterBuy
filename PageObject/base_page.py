@@ -39,6 +39,20 @@ class BasePage:
         assert error_link, "Link is not clickable!"
         print("Link is clickable!")
 
+    def find_element_displayed(self, locator, time=20):
+        WebDriverWait(self.browser, time).until(EC.visibility_of_element_located(locator),
+                                                message=f"Cant find visible elements by locator {locator}")
+
+    def verify_element_is_hided(self, locator, maxi=140):
+        a = 0
+        while a < maxi:
+            try:
+                self.find_element_displayed(locator, time=3)
+                a += 1
+            except:
+                time.sleep(2)
+                return True
+
     def go_to_url(self, url):
         while True:
             try:
@@ -46,5 +60,3 @@ class BasePage:
                 break
             except:
                 time.sleep(10)
-
-

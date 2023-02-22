@@ -92,3 +92,4 @@ def check_add_customer_notifier(context):
 def customer_shipping_address(context):
     browser: WebDriver = context.browser
     SalesUserPage(browser).new_shipping_address()
+

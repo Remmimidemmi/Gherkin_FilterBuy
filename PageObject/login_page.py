@@ -2,13 +2,11 @@ from syst.URLs import Urls
 from PageObject.base_page import BasePage
 from syst.data import RegistrationCreds, LogInCreds
 from syst.locators import LoginPageLocators, MainPageLocators
+from syst.mail import ReadLettersFromGmail
 
 
 class LoginPage(BasePage):
-    # def __init__(self, browser):
-    #     super().__init__(browser)
-    #     #self.email = RegistrationCreds.REGISTRATION_EMAIL
-    #     self.password = RegistrationCreds.PASSWORD
+
     def login_page(self):
         self.main_page()
         self.browser.find_element(*MainPageLocators.MY_ACCOUNT_BUTTON).click()
@@ -64,16 +62,18 @@ class LoginPage(BasePage):
             RegistrationCreds.PASSWORD)
         self.browser.find_element(*LoginPageLocators.SIGN_IN_BUTTON).click()
 
-    def forgot_password_login_page(self, email):
+    def forgot_password_login_page(self):
         self.browser.find_element(*LoginPageLocators.FORGOT_PASSWORD_LINK).click()
+
+    def send_email_to_forgot_password_field(self, email):
         self.browser.find_element(*LoginPageLocators.RESET_PASSWORD_FIELD).send_keys(email)
-        print(f'3:\n{email}')
         self.browser.find_element(*LoginPageLocators.RESET_PASSWORD_SUBMIT_BTN).click()
 
-    def change_password_from_login_page(self, password):
+    def goes_to_mailbox(self):
         link = ReadLettersFromGmail().return_link_for_reset_password()
         self.go_to_url(link)
+
+    def send_pass_for_reset_forgot_password(self, password):
         self.browser.find_element(*LoginPageLocators.NEW_PASSWORD_RESET_FIELD).send_keys(password)
         self.browser.find_element(*LoginPageLocators.CONFIRM_PASSWORD_RESET_FIELD).send_keys(password)
         self.browser.find_element(*LoginPageLocators.SUBMIT_BUTTON_RESET_PASSWORD).click()
-
